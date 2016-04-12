@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="tempBlue">#11A2F5</color>
+
+    <!-- page of pullToRefreshLayout start-->
+    <color name="light_blue">#6593cb</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="black">#000000</color>
+    <color name="textBlueColor">#3fa2ee</color>
+    <color name="loginBack">#f0f0f0</color>
+    <!-- page of pullToRefreshLayout end-->
+
+    <!-- page of register-->
+    <color name="Purple">#BE77FF</color>
+    <color name="dpdpdp">#dbdbdb</color> <!-- 条目边框 -->
+    <color name="textbluecolor">#3fa2ee</color>   <!--  字体蓝色 -->
+    <color name="lightgray">#e0e0e0e0</color>   <!--  灰色半透明 -->
+    <color name="textgray">#666</color> <!-- 文字灰 -->
+    <color name="lightwhite">#80ffffff</color>   <!--  白色半透明 -->
+    <!-- 边框底部线  浅灰 -->
+    <color name="bottomline">#dbdbdb</color>
+    <color name="light">#00000000</color>
+    <color name="tm">#FDFBFB</color>
+    <color name="lightblue">#1897D6</color>
+    <!--page of activity_main-->
+    <color name="main_bottom_line">#DEDEDE</color>
+    <color name="button_text_color_click">#11A2F7</color>
+    <color name="button_text_color_normal">#A9A9A9</color>
+    <color name="switch_text_color_normal">#ffffff</color>
+    <color name="top_switch_click">#D6F0FF</color>
+    <color name="top_switch_normal">#11A2F5</color>
+    <color name="condition_reset">#EEEEEE</color>
+
+    <!--page of detail -->
+    <color name="detail_tv_background">#F5F5F5</color>
+
+
+    <!--gridview-->
+    <color name="griditems_bg">#ffe8ecef</color>
+    <color name="commo_text_color">#ff333333</color>
+    <color name="line">#ffd3dde6</color>
+
+</resources>

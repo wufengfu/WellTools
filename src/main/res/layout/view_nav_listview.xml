@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 此部分是标题部分 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:orientation="horizontal">
+
+        <!-- 左侧标题的父容器 -->
+
+        <LinearLayout
+            android:id="@+id/left_title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_left_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_8"
+                android:textColor="@color/textBlueColor"
+                android:textSize="18sp"
+                android:text="hellow world"
+                />
+        </LinearLayout>
+
+        <!-- 右侧标题的父容器可实现水平滚动 -->
+
+        <com.example.myapplication.customview.SyncHorizontalScrollView
+            android:id="@+id/title_horsv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scrollbars="@null">
+
+            <LinearLayout
+                android:id="@+id/right_title_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+
+        </com.example.myapplication.customview.SyncHorizontalScrollView>
+    </LinearLayout>
+    <!-- android:background="#ab5f5f" -->
+    <!-- 此部分是内容部分 用ScrollView实现上下滚动效果 -->
+
+    <com.example.myapplication.pullrefreshloadview.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.example.myapplication.pullrefreshloadview.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- 左侧内容的父容器 -->
+
+                <LinearLayout
+                    android:id="@+id/left_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.example.myapplication.customview.NestListView
+                        android:id="@+id/left_container_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@color/dpdpdp"
+                        android:layoutAnimation="@anim/left_in_layout_animation"
+                        android:dividerHeight="@dimen/dp_1"/>
+                </LinearLayout>
+
+                <!-- 右侧内容的父容器 实现水平滚动 -->
+
+                <com.example.myapplication.customview.SyncHorizontalScrollView
+                    android:id="@+id/content_horsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fillViewport="true"
+                    android:scrollbars="@null">
+
+                    <LinearLayout
+                        android:id="@+id/right_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.example.myapplication.customview.NestListView
+                            android:id="@+id/right_container_listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@color/dpdpdp"
+                            android:layoutAnimation="@anim/right_in_layout_animation"
+                            android:dividerHeight="@dimen/dp_1"/>
+                    </LinearLayout>
+                </com.example.myapplication.customview.SyncHorizontalScrollView>
+            </LinearLayout>
+        </com.example.myapplication.pullrefreshloadview.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+    </com.example.myapplication.pullrefreshloadview.PullToRefreshLayout>
+
+</LinearLayout>
